@@ -24,10 +24,6 @@ This is a **Streamlit-based web application** designed to assist urban planners,
 - Simple and user-friendly UI with Streamlit
 
 ---
-
-## 🗂️ Project Structure
-
-
 DEPLOYED ON STREAMLIT-
 https://areaandindex.streamlit.app/
 
