@@ -1,18 +1,32 @@
-# 💼 Streamlit Portfolio Website
+# 🌍 Urban Planning Geospatial Tool
 
-This is a simple and elegant **portfolio web application** built using [Streamlit](https://streamlit.io/). It features a welcoming homepage with a custom background image, centered heading, and a "Get Started" button to redirect users to the main app.
+This is a **Streamlit-based web application** designed to assist urban planners, researchers, and students in analyzing **land classification data** over time. The tool supports visualization of `.tif` raster images and calculates important indices such as:
+
+- 🌱 Green Index Percentage (GIP)
+- 🏙️ Built-up Index Percentage (GBP)
+- 🟢 Green Space Index (GSI)
+
+---
+
+## 🔍 Features
+
+- Upload and visualize classified `.tif` raster images
+- Interactive display of green and built-up areas using color maps
+- Automatic calculation of:
+  - Green Area 
+  - Built-up Area 
+  - impervious area
+  - permeable area
+  - other space
+  - GSI based on pixel classification
+- Side-by-side comparison of different years for change detection
+- display of data charts based on a particular class over given years
+- Simple and user-friendly UI with Streamlit
 
 ---
 
-## 🚀 Features
+## 🗂️ Project Structure
 
-- Clean and minimal homepage
-- Background image support
-- Centered title and call-to-action button
-- Navigation to other app pages (like `myapp.py`)
-- Easily customizable layout
-
----
 
 DEPLOYED ON STREAMLIT-
 https://areaandindex.streamlit.app/
