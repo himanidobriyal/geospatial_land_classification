@@ -4,3 +4,5 @@ pandas
 rasterio
 numpy
 scipy
+rasterio
+pyproj
