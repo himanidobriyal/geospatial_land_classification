@@ -6,3 +6,4 @@ numpy
 scipy
 rasterio
 pyproj
+fiona
