@@ -379,32 +379,32 @@ if st.session_state.get("show_instructions", False):
     2) Upload **Shapefile ZIP** containing `.shp .shx .dbf .prj`.  
     3) The app detects the shapefile CRS and clips to the AOI for **previews and calculations**.  
     4) Turn on debug logs for CRS/AOI details.
-#   5) Wait for Loading Allow all selected images to load completely. Loading time may vary depending on file size and the area of the city.  
-#   6)Calculate Areas Once images are loaded, click on the desired **Area Calculation** button (e.g., *Green Space*, *Built Space*, etc.) in the sidebar.  
-#   7)Calculate Indexes Similarly, click on any **Index Calculation** button (*GIP*, *GBP*, *GSI*) to compute the selected index.  
-#   8)**Note** – Area or index calculations can only be performed once images have fully loaded.  
+    5) Wait for Loading Allow all selected images to load completely. Loading time may vary depending on file size and the area of the city.  
+  6)Calculate Areas Once images are loaded, click on the desired **Area Calculation** button (e.g., *Green Space*, *Built Space*, etc.) in the sidebar.  
+  7)Calculate Indexes Similarly, click on any **Index Calculation** button (*GIP*, *GBP*, *GSI*) to compute the selected index.  
+  8)**Note** – Area or index calculations can only be performed once images have fully loaded.  
 
-#     ---
+    ---
 
-#     ### Google Earth Engine Export Code  
-#     Use this Earth Engine code to export your classified raster:
+    ### Google Earth Engine Export Code  
+    Use this Earth Engine code to export your classified raster:
 
-#     ```javascript
-#     Export.image.toDrive({
-#       image: classified.clip(kota).rename('classification'),
-#       description: 'classified_kota_' + year,
-#       folder: 'EarthEngineExports',
-#       fileNamePrefix: 'kota_classified_' + year,
-#       region: kota.geometry(),
-#       scale: 10,
-#       crs: 'EPSG:4326',
-#       fileFormat: 'GeoTIFF',
-#       maxPixels: 1e13
-#     });
-#     ```
-#     ✔️ **Adjust `scale` and `crs` as needed.**  
-#     ✔️ **Check the *Tasks* tab in Earth Engine to download the export.**  
-#     ✔️ **Always clip to your polygon for accurate area results.**
+    ```javascript
+    Export.image.toDrive({
+      image: classified.clip(kota).rename('classification'),
+      description: 'classified_kota_' + year,
+      folder: 'EarthEngineExports',
+      fileNamePrefix: 'kota_classified_' + year,
+      region: kota.geometry(),
+      scale: 10,
+      crs: 'EPSG:4326',
+      fileFormat: 'GeoTIFF',
+      maxPixels: 1e13
+    });
+    ```
+    ✔️ **Adjust `scale` and `crs` as needed.**  
+    ✔️ **Check the *Tasks* tab in Earth Engine to download the export.**  
+    ✔️ **Always clip to your polygon for accurate area results.**
     """)
     if st.button("Close Instructions"):
         st.session_state.show_instructions = False
